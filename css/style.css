@@ -37,13 +37,19 @@ body{
 
 
 /* start nav */
+.secnav{
+		   position: absolute;
+		   z-index: 10;
+		   width: 100%;
+	   }
+
+/*
 .navhead{
 			background: rgba(255, 255, 255, 0.9);
-/*
 			position:sticky;
 			top: 0;
-*/
 		}
+*/
 .navbar-collapse .navbar-nav .nav-item .nav-link{
 													color: #282828;
 													font-family: 'Noto Sans SC', sans-serif;
@@ -61,47 +67,16 @@ body{
 
 @media (max-width: 767px)
    {
-	 .navbar{
-		 		z-index: 1;
-		 		height: 100%;
-		 		position: static;
-	   		}
-	   
-     .navbar-collapse {
-                          position: absolute;
-                          top: 119px;
-                          left: 0;
-                          padding-left: 0;
-                          padding-right: 0;
-                          padding-bottom: 15px;
-                          width: 45%;
-                          height: 70%;
-		 				  background-color: #222534;
-   					   }
-	   
-     .navbar-collapse.collapsing {
-        						     left: -50%;
-        							 transition: height 0s ease;
-   								 }
-	   
-     .navbar-collapse.show {
-   						       left: 0;
-   						       transition: left 300ms ease-in-out;
-		 					   z-index: 5;
-   						   }
-
-     .navbar-toggler.collapsed ~ .navbar-collapse {
-        											  transition: left 500ms ease-in-out;
-    											  }
-	   
+/*
 	 .navbar-collapse .navbar-nav .nav-item .nav-link{
 		   											     color: white;
 		   											     padding-left: 0;
 		   											     padding-right: 0;
 		 												 background: none;
 	   												 }
+*/
 	 .navbar .navbar-toggler{
-		   					    background-color: #28B463; 
+		   					    background-color: #28B463
 	   						}
 	   
 	 .background .bgtext{
@@ -178,7 +153,8 @@ body{
 			   display: flex;
    			   align-items: center;
     		   justify-content: left;
-		   }
+			   position: relative;
+			}
 
 .background .bgtext{
 	       				background-color: rgba(255,255,255,0.82);
@@ -189,7 +165,7 @@ body{
 
 .background .bgtext .bgbtn:first-of-type{
 	 			 	 		  				 border: 0px solid #28B463;
-	 			 	 		  				 padding: 10px 30px;
+	 			 	 		  				 padding: 10px 29px;
 	 			 	 		  				 background-color: #28B463;
 											 color: #fff;
 	 			  		  				}
@@ -220,10 +196,12 @@ body{
 		   					  padding: 55px;
 	   					 }
 	   
+/*
 	  .background .bgtext .bgbtn{
 		   							padding-right: 9px;
 		   							padding-left: 9px;
 	   							}
+*/
 	  .imgdoc img{
 		   			 height: 430px;
 	   			 }
@@ -251,7 +229,27 @@ body{
 	  .slidecard h2{
 				       width: 80% !important;
 			       }
-	   .navbar-collapse{height: 75% !important;}
+	  .header{
+		  		 display: none;
+	   		 }
+	   
+	  .imgdoc img{
+			   		margin-top: 0 !important;
+		  			height: 88% !important;
+		  			width: 70% !important;
+		   		 }
+
+   }
+
+@media (max-width: 350px)
+   {
+	  .background .bgtext .bgbtn:first-of-type{
+	 			 	 		  					  padding: 10px 15px;
+	 			  		  					  }
+
+	  .background .bgtext .bgbtn:last-of-type{
+	 			 	 		  					  padding: 10px 16px;
+	 			  		  			   		 }
    }
 
 
